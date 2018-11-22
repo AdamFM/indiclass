@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:id="@+id/rlmasuk">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="6dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <RelativeLayout
+                android:id="@+id/bgtop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:contentDescription="Thumbnail"
+                    android:paddingTop="2dp"
+                    android:src="@drawable/porva" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/icon"
+                    android:layout_toRightOf="@+id/icon"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            tools:text="Robith Ritz" />
+
+                        <TextView
+                            android:id="@+id/tvTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp"
+                            tools:text="10:00" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        tools:text="Matematika, Aljabar" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buttonEnter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/bgtop"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:padding="8dp"
+                android:text="Masuk Kelas"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/buttonWait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/bgtop"
+                android:layout_marginTop="4dp"
+                android:focusable="false"
+                android:padding="8dp"
+                android:text="" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

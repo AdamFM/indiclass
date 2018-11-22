@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#D32F2F</color>
+    <color name="colorAccent">#03A9F4</color>
+    <color name="colorPrimarys">#1AF44336</color>
+    <color name="bgBottomNavigation">#fe485a</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_500">#a4a4a4</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_800">#212121</color>
+    <color name="colorHead">#363147</color>
+    <color name="colorpara">#8b8a8d</color>
+
+    <color name="colorDisable">#FFB74D</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="grey">#f2f2f2</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorFollow">#4caf50</color>
+    <color name="colorFollowClick">#388E3C</color>
+    <color name="colorUnfollow">#ff9270</color>
+    <color name="colorText">#ffffff</color>
+    <color name="inactiv">#999999</color>
+    <color name="red500">#CC0033</color>
+    <color name="shadow">#66000000</color>
+    <color name="material_grey">#ededed</color>
+    <color name="black">#000000</color>
+    <color name="payment_status_failed">#D4385C</color>
+    <color name="payment_status_pending">#FAAF3F</color>
+    <color name="payment_status_success">#8BC53F</color>
+    <color name="gray_divider">#E0E0E0</color>
+    <color name="dark_gray">#757575</color>
+
+    <color name="primary_green">#52bf90</color>
+    <color name="primary_dark_green">#398564</color>
+    <color name="accent_green">#FF4081</color>
+    <color name="activity_bg">#e4e5e5</color>
+    <color name="primary_purple">#38aae1</color>
+    <color name="primary_dark_purple">#1d96d0</color>
+    <color name="primary_light">#D1C4E9</color>
+    <color name="accent_purple">#FF9800</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="activity_bg_black">#374046</color>
+    <color name="tras">#33F2F2F2</color>
+
+    <color name="stepview_line_done">@android:color/white</color>
+    <color name="stepview_line_next">#26ffffff</color>
+    <color name="stepview_text_next">#40ffffff</color>
+    <color name="stepview_text_done">#40ffffff</color>
+    <color name="stepview_text_selected">@android:color/white</color>
+    <color name="stepview_circle_done">@android:color/white</color>
+    <color name="stepview_circle_selected">@android:color/white</color>
+    <color name="stepview_selected_number">#25448a</color>
+    <color name="stepview_mark">@color/stepview_selected_number</color>
+
+    <color name="bg_light">#fafafa</color>
+
+    <color name="bottomtab_item_resting">#36000000</color>
+    <color name="bottomtab_item_disabled">#1e000000</color>
+
+    <color name="bottomtab_0">#6CCC3D</color>
+    <color name="bottomtab_1">#EA5C46</color>
+    <color name="bottomtab_2">#33b3cc</color>
+
+    <color name="colorPrimaryNight">#3F51B5</color>
+    <color name="colorPrimaryDarkNight">#303F9F</color>
+    <color name="colorAccentNight">#FFC107</color>
+    <color name="bg_dark">#263238</color>
+
+    <color name="divider_light">#0c000000</color>
+</resources>

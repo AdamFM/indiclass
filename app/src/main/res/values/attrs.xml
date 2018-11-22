@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BadgedTabLayout">
+        <attr name="badgeTextColor" format="color" />
+        <attr name="badgeTextSize" format="dimension" />
+        <attr name="badgeSelectedTextColor" format="color" />
+        <attr name="badgeBackgroundColor" format="color" />
+        <attr name="badgeSelectedBackgroundColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="AvatarImageBehavior">
+        <attr name="finalYPosition" format="dimension"/>
+        <attr name="startXPosition" format="dimension"/>
+        <attr name="startToolbarPosition" format="dimension"/>
+        <attr name="startHeight" format="dimension"/>
+        <attr name="finalHeight" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="LabelView">
+        <attr name="label_distance" format="dimension" />
+        <attr name="label_height" format="dimension"/>
+        <attr name="label_strokeWidth" format="dimension"/>
+        <attr name="label_backgroundColor" format="color"/>
+        <attr name="label_strokeColor" format="color"/>
+        <attr name="label_text" format="string"/>
+        <attr name="label_textSize" format="dimension" />
+        <attr name="label_textStyle" format="enum" >
+            <enum name="NORMAL" value="0"/>
+            <enum name="BOLD" value="1"/>
+            <enum name="ITALIC" value="2"/>
+            <enum name="BOLD_ITALIC" value="3"/>
+        </attr>
+        <attr name="label_textColor" format="color"/>
+        <attr name="label_visual" format="boolean"/>
+        <attr name="label_orientation" format="enum">
+            <enum name="LEFT_TOP" value="1"/>
+            <enum name="RIGHT_TOP" value="2"/>
+            <enum name="LEFT_BOTTOM" value="3"/>
+            <enum name="RIGHT_BOTTOM" value="4"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="StepView">
+        <attr name="sv_selectedCircleColor" format="color" />
+        <attr name="sv_selectedCircleRadius" format="dimension" />
+        <attr name="sv_selectedTextColor" format="color" />
+        <attr name="sv_selectedStepNumberColor" format="color" />
+        <attr name="sv_stepNumberTextSize" format="dimension" />
+        <attr name="sv_doneStepMarkColor" format="color" />
+        <attr name="sv_doneCircleColor" format="color" />
+        <attr name="sv_doneCircleRadius" format="dimension" />
+        <attr name="sv_doneTextColor" format="color" />
+        <attr name="sv_nextTextColor" format="color" />
+        <attr name="sv_nextStepLineColor" format="color" />
+        <attr name="sv_doneStepLineColor" format="color" />
+        <attr name="sv_stepPadding" format="dimension" />
+        <attr name="sv_textPadding" format="dimension" />
+        <attr name="sv_stepLineWidth" format="dimension" />
+        <attr name="sv_textSize" />
+        <attr name="sv_background" />
+        <attr name="sv_animationDuration" />
+        <attr name="sv_stepViewStyle" format="reference" />
+        <attr name="sv_animationType" format="enum">
+            <enum name="Line" value="0" />
+            <enum name="Circle" value="1" />
+            <enum name="All" value="2" />
+            <enum name="None" value="3" />
+        </attr>
+        <attr name="sv_stepsNumber" format="integer" />
+        <attr name="sv_steps" format="reference" />
+        <attr name="sv_typeface" format="reference" />
+    </declare-styleable>
+</resources>

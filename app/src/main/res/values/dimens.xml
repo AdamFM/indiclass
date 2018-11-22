@@ -1,0 +1,64 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="card_margin">5dp</dimen>
+    <dimen name="card_album_radius">0dp</dimen>
+    <dimen name="card_cover_height">130dp</dimen>
+    <dimen name="card_title_padding">10dp</dimen>
+    <dimen name="card_price_padding_bottom">5dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- general dimensions for all custom menu items -->
+    <dimen name="menu_item_icon_size">24dp</dimen>
+    <dimen name="menu_item_size">48dp</dimen>
+    <dimen name="menu_item_ripple_size">48dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="tab_text_max_width">80dp</dimen>
+
+    <!-- dimensions -->
+    <dimen name="image_width">120dp</dimen>
+    <dimen name="image_final_width">32dp</dimen>
+
+    <dimen name="small_font_size">12sp</dimen>
+    <dimen name="average_font_size">14sp</dimen>
+    <dimen name="large_font_size">16sp</dimen>
+    <dimen name="standard_radius">5dp</dimen>
+
+    <dimen name="small_image">10dp</dimen>
+
+    <dimen name="standard_small">45dp</dimen>
+    <dimen name="small_height">50dp</dimen>
+    <dimen name="average_height">60dp</dimen>
+    <dimen name="long_height">200dp</dimen>
+
+    <dimen name="long_width">200dp</dimen>
+    <dimen name="small_width">80dp</dimen>
+
+    <dimen name="max_chat_width">180dp</dimen>
+
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_average">10dp</dimen>
+    <dimen name="padding_large">20dp</dimen>
+
+    <dimen name="margin_small">5dp</dimen>
+    <dimen name="margin_average">10dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_extra_large">50dp</dimen>
+
+    <dimen name="dialog_width">280dp</dimen>
+    <dimen name="dialog_height">380dp</dimen>
+
+    <dimen name="spacing_xsmall">2dp</dimen>
+    <dimen name="spacing_medium">8dp</dimen>
+    <dimen name="spacing_large">16dp</dimen>
+    <dimen name="spacing_xlarge">32dp</dimen>
+
+    <dimen name="elevation_low">9dp</dimen>
+    <dimen name="elevation_high">12dp</dimen>
+    <dimen name="status_bar_height">25dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+</resources>
+

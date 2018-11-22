@@ -1,0 +1,43 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f5f7"
+    tools:context="com.apps.indiclass.fragment.ClassFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="16dp"
+            android:paddingTop="18dp"
+            android:text="Kelas Saya"
+            android:textColor="#111"
+            android:textSize="16sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/tvnoclassdetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal"
+            android:padding="8dp"
+            android:text="Kamu tidak memiliki kelas di tanggal ini"
+            android:textColor="#757575"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:background="@android:color/white"/>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

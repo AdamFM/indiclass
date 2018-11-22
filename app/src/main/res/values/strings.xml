@@ -1,0 +1,146 @@
+<resources>
+    <string name="app_name">IndiClass</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_dashboard">Kelas</string>
+    <string name="title_tutor">Tutor</string>
+    <string name="title_notifications">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello Notification fragment</string>
+    <string name="hello_class_fragment">Hello Class fragment</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="login">LOGIN</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="forgot_your_password">Forgot your password ?</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="register">REGISTER</string>
+    <string name="go">GO</string>
+    <string name="search_tutor_here">Cari Tutor disini</string>
+    <string name="number_picker_formatter">%02d</string>
+
+    <string name="notif_entering">Anda masuk kelas %1$s</string>
+    <string name="exit_classroom">Apakah Anda ingin keluar dari kelas?</string>
+    <string name="confirmation">Konfirmasi</string>
+    <string name="do_you">"Apakah Anda ingin memilih "</string>
+    <string name="tobe_your">" menjadi Tutor "</string>
+    <string name="tutor_for">" Anda pada "</string>
+    <string name="if_message_approval">\n\nJika IYA, kami akan meminta persetujuan yang bersangkutan.\n\nAnda perlu menunggu maksimum satu jam untuk persetujuan tersebut.</string>
+    <string name="cannot_empty">Tidak boleh kosong</string>
+    <string name="loading">Mohon tunggu . . .</string>
+    <string-array name="duration_name">
+        <item>15 Menit</item>
+        <item>30 Menit</item>
+        <item>45 Menit</item>
+        <item>1 Jam</item>
+        <item>1 Jam 30 Menit</item>
+        <item>2 Jam</item>
+        <item>2 Jam 30 Menit</item>
+        <item>3 Jam</item>
+        <item>3 Jam 30 Menit</item>
+        <item>4 Jam</item>
+        <item>4 Jam 30 Menit</item>
+        <item>5 Jam</item>
+        <item>5 Jam 30 Menit</item>
+        <item>6 Jam</item>
+        <item>6 Jam 30 Menit</item>
+        <item>7 Jam</item>
+        <item>7 Jam 30 Menit</item>
+        <item>8 Jam</item>
+        <item>8 Jam 30 Menit</item>
+        <item>9 Jam</item>
+        <item>9 Jam 30 Menit</item>
+        <item>10 Jam</item>
+        <item>10 Jam 30 Menit</item>
+        <item>11 Jam</item>
+        <item>11 Jam 30 Menit</item>
+        <item>12 Jam</item>
+        <item>12 Jam 30 Menit</item>
+        <item>13 Jam</item>
+        <item>13 Jam 30 Menit</item>
+        <item>14 Jam</item>
+        <item>14 Jam 30 Menit</item>
+        <item>15 Jam</item>
+        <item>15 Jam 30 Menit</item>
+        <item>16 Jam</item>
+        <item>16 Jam 30 Menit</item>
+        <item>17 Jam</item>
+        <item>17 Jam 30 Menit</item>
+        <item>18 Jam</item>
+        <item>18 Jam 30 Menit</item>
+        <item>19 Jam</item>
+        <item>19 Jam 30 Menit</item>
+        <item>20 Jam</item>
+        <item>20 Jam 30 Menit</item>
+        <item>21 Jam</item>
+        <item>21 Jam 30 Menit</item>
+        <item>22 Jam</item>
+        <item>22 Jam 30 Menit</item>
+        <item>23 Jam</item>
+        <item>23 Jam 30 Menit</item>
+        <item>24 Jam</item>
+    </string-array>
+    <string-array name="duration_value">
+        <item>900</item>
+        <item>1800</item>
+        <item>2700</item>
+        <item>3600</item>
+        <item>5400</item>
+        <item>7200</item>
+        <item>9000</item>
+        <item>10800</item>
+        <item>12600</item>
+        <item>14400</item>
+        <item>16200</item>
+        <item>18000</item>
+        <item>19800</item>
+        <item>21600</item>
+        <item>23400</item>
+        <item>25200</item>
+        <item>27000</item>
+        <item>28800</item>
+        <item>30600</item>
+        <item>32400</item>
+        <item>34200</item>
+        <item>36000</item>
+        <item>37800</item>
+        <item>39600</item>
+        <item>41400</item>
+        <item>43200</item>
+        <item>45000</item>
+        <item>46800</item>
+        <item>48600</item>
+        <item>50400</item>
+        <item>52200</item>
+        <item>54000</item>
+        <item>55800</item>
+        <item>57600</item>
+        <item>59400</item>
+        <item>61200</item>
+        <item>63000</item>
+        <item>64800</item>
+        <item>66600</item>
+        <item>68400</item>
+        <item>70200</item>
+        <item>72000</item>
+        <item>73800</item>
+        <item>75600</item>
+        <item>77400</item>
+        <item>79200</item>
+        <item>81000</item>
+        <item>82800</item>
+        <item>84600</item>
+        <item>86400</item>
+    </string-array>
+</resources>

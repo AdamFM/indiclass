@@ -1,0 +1,75 @@
+{
+  "project_info": {
+    "project_number": "850067769597",
+    "firebase_url": "https://classmiles-1380.firebaseio.com",
+    "project_id": "classmiles-1380",
+    "storage_bucket": "classmiles-1380.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850067769597:android:6e4519e3482a723b",
+        "android_client_info": {
+          "package_name": "com.classmiles.student"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850067769597-p58oo9pbk921984djd7g8fbcu2i3ve0c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.classmiles.student",
+            "certificate_hash": "5003884813e377a1f764821c65632e27f9fabfe4"
+          }
+        },
+        {
+          "client_id": "850067769597-btfg6hv63ugjn842sav5l380te4fk81i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.classmiles.student",
+            "certificate_hash": "f90208d97e3a859c0c11103840b6c79d6708cb44"
+          }
+        },
+        {
+          "client_id": "850067769597-ffuf9srlri3dr0f9dogbst0ln69dk7mp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.classmiles.student",
+            "certificate_hash": "fb2c3c82be2955556bd5ed61539e86276e24fcfd"
+          }
+        },
+        {
+          "client_id": "850067769597-ecsdsbncp8svlha5rtk37dgj61rc3sns.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "850067769597-u7eaknsmcjfb2bc80lvfgt5nh71p7kuc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2-Y0SCG1Qf-kKZXekHmvo-4ncK682reA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850067769597-ecsdsbncp8svlha5rtk37dgj61rc3sns.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

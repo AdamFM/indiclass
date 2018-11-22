@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.apps.indiclass.ReqClassActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_ondemanddalem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rldate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="Dates"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <ImageView
+                android:id="@+id/iconoddate"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:contentDescription="Thumbnail"
+                android:padding="16dp"
+                android:src="@drawable/calendartoday" />
+
+            <TextView
+                android:id="@+id/oddate"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/iconoddate"
+                android:paddingBottom="3dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:text="Pilih Tanggal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTgl"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/oddate"
+                android:layout_toLeftOf="@+id/iconoddate"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="10 Nov 2018, 10:00" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rltime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rldate"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="Times"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <ImageView
+                android:id="@+id/iconodtime"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:contentDescription="Thumbnail"
+                android:padding="16dp"
+                android:src="@drawable/calendarclock" />
+
+            <TextView
+                android:id="@+id/odtime"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/iconodtime"
+                android:paddingBottom="3dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:text="Pilih Waktu"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/odtime"
+                android:layout_toLeftOf="@+id/iconodtime"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="10:00" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rldur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rltime"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onDurasi"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <ImageView
+                android:id="@+id/iconoddur"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:contentDescription="Thumbnail"
+                android:padding="16dp"
+                android:src="@drawable/timer" />
+
+            <TextView
+                android:id="@+id/tvd"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/iconoddur"
+                android:paddingBottom="3dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:text="Pilih Durasi"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDurasi"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvd"
+                android:layout_toLeftOf="@+id/iconoddur"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="Memilih durasi" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlsub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rldur"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onSubject"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <ImageView
+                android:id="@+id/iconodsub"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:contentDescription="Thumbnail"
+                android:padding="16dp"
+                android:src="@drawable/buffer" />
+
+            <TextView
+                android:id="@+id/tvds"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/iconodsub"
+                android:paddingBottom="3dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:text="Pilih Pelajaran"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSub"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvds"
+                android:layout_toLeftOf="@+id/iconodsub"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="Memilih pelajaran" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btnsearchextra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:onClick="onSearch"
+            android:text="Cari"
+            android:theme="@style/MyButtonOrange" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAwals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvecnot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Tidak ada Tutor yang tersedia"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</RelativeLayout>

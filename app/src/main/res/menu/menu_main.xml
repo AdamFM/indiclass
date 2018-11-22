@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DetailTutorActivity">
+    <!--<item-->
+        <!--android:id="@+id/action_edit"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title=""-->
+        <!--app:showAsAction="always"-->
+        <!--android:icon="@drawable/ic_pencil_white_24dp"/>-->
+    <item
+        android:id="@+id/action_save"
+        android:orderInCategory="100"
+        android:title=""
+        app:showAsAction="always"
+        android:icon="@drawable/ic_check_white_24dp"/>
+</menu>
