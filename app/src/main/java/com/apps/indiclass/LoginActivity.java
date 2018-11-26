@@ -35,7 +35,7 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
 
     private static final String TAG = "LoginActivity";
-//    FloatingActionButton fab;
+    FloatingActionButton fab;
     ApiCall mAPIService;
     SessionManager session;
     // UI references.
@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
 
         mAPIService = ApiUtils.getRestAPI(Constant.BASE_URL);
 
-//        fab = findViewById(R.id.fab);
+        fab = findViewById(R.id.fab);
 
         // Set up the login form.
         mEmailView = findViewById(R.id.emails);
@@ -217,18 +217,22 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-//    @SuppressLint("RestrictedApi")
-//    public void clickRegisterLayout(View view) {
-//        getWindow().setExitTransition(null);
-//        getWindow().setEnterTransition(null);
-//
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            ActivityOptions options =
-//                    ActivityOptions.makeSceneTransitionAnimation(this, fab, fab.getTransitionName());
-//            startActivityForResult(new Intent(this, RegisterActivity.class), 200, options.toBundle());
-//        } else {
-//            startActivityForResult(new Intent(this, RegisterActivity.class), 200);
-//        }
-//    }
+    @SuppressLint("RestrictedApi")
+    public void clickRegisterLayout(View view) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setExitTransition(null);
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setEnterTransition(null);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            ActivityOptions options =
+                    ActivityOptions.makeSceneTransitionAnimation(this, fab, fab.getTransitionName());
+            startActivityForResult(new Intent(this, RegisterActivity.class), 200, options.toBundle());
+        } else {
+            startActivityForResult(new Intent(this, RegisterActivity.class), 200);
+        }
+    }
 }
 

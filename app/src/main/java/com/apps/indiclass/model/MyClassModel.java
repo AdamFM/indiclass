@@ -11,6 +11,8 @@ public class MyClassModel {
     private String sSubject;
     private String sTime;
     private String sImage;
+    private String sDateStart;
+    private String sDateEnd;
     private long expiredTime;
 
     public MyClassModel() {
@@ -25,8 +27,26 @@ public class MyClassModel {
                 ", sSubject='" + sSubject + '\'' +
                 ", sTime='" + sTime + '\'' +
                 ", sImage='" + sImage + '\'' +
+                ", sDateStart='" + sDateStart + '\'' +
+                ", sDateEnd='" + sDateEnd + '\'' +
                 ", expiredTime=" + expiredTime +
                 '}';
+    }
+
+    public String getsDateStart() {
+        return sDateStart;
+    }
+
+    public void setsDateStart(String sDateStart) {
+        this.sDateStart = sDateStart;
+    }
+
+    public String getsDateEnd() {
+        return sDateEnd;
+    }
+
+    public void setsDateEnd(String sDateEnd) {
+        this.sDateEnd = sDateEnd;
     }
 
     public long getExpiredTime() {

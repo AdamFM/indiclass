@@ -1,5 +1,6 @@
 package com.apps.indiclass;
 
+import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
@@ -19,12 +20,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.animation.LinearOutSlowInInterpolator;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.OvershootInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -331,6 +334,123 @@ public class MainActivity extends AppCompatActivity {
 
         //  Displays item Title always (for selected and non-selected items)
         bottomNavigation.setTitleState(AHBottomNavigation.TitleState.ALWAYS_SHOW);
+
+        bottomNavigation.manageFloatingActionButtonBehavior(fab);bottomNavigation.setTranslucentNavigationEnabled(true);
+
+        bottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener() {
+            @Override
+            public boolean onTabSelected(int position, boolean wasSelected) {
+
+                Log.w(TAG, "onTabSelected: "+position );
+                if (position == 0) {
+                    bottomNavigation.setNotification("", 0);
+                    navigation.setSelectedItemId(R.id.navigation_dashboard);
+
+                    fab.setVisibility(View.VISIBLE);
+                    fab.setAlpha(0f);
+                    fab.setScaleX(0f);
+                    fab.setScaleY(0f);
+                    fab.animate()
+                            .alpha(1)
+                            .scaleX(1)
+                            .scaleY(1)
+                            .setDuration(300)
+                            .setInterpolator(new OvershootInterpolator())
+                            .setListener(new Animator.AnimatorListener() {
+                                @Override
+                                public void onAnimationStart(Animator animation) {
+
+                                }
+
+                                @Override
+                                public void onAnimationEnd(Animator animation) {
+                                    fab.animate()
+                                            .setInterpolator(new LinearOutSlowInInterpolator())
+                                            .start();
+                                }
+
+                                @Override
+                                public void onAnimationCancel(Animator animation) {
+
+                                }
+
+                                @Override
+                                public void onAnimationRepeat(Animator animation) {
+
+                                }
+                            })
+                            .start();
+
+                } else if (position == 1){
+
+                    navigation.setSelectedItemId(R.id.navigation_tutor);
+                    if (fab.getVisibility() == View.VISIBLE) {
+                        fab.animate()
+                                .alpha(0)
+                                .scaleX(0)
+                                .scaleY(0)
+                                .setDuration(300)
+                                .setInterpolator(new LinearOutSlowInInterpolator())
+                                .setListener(new Animator.AnimatorListener() {
+                                    @Override
+                                    public void onAnimationStart(Animator animation) {
+
+                                    }
+
+                                    @Override
+                                    public void onAnimationEnd(Animator animation) {
+                                        fab.setVisibility(View.GONE);
+                                    }
+
+                                    @Override
+                                    public void onAnimationCancel(Animator animation) {
+                                        fab.setVisibility(View.GONE);
+                                    }
+
+                                    @Override
+                                    public void onAnimationRepeat(Animator animation) {
+
+                                    }
+                                })
+                                .start();
+                    }
+                } else {
+                    navigation.setSelectedItemId(R.id.navigation_notifications);
+                    if (fab.getVisibility() == View.VISIBLE) {
+                        fab.animate()
+                                .alpha(0)
+                                .scaleX(0)
+                                .scaleY(0)
+                                .setDuration(300)
+                                .setInterpolator(new LinearOutSlowInInterpolator())
+                                .setListener(new Animator.AnimatorListener() {
+                                    @Override
+                                    public void onAnimationStart(Animator animation) {
+
+                                    }
+
+                                    @Override
+                                    public void onAnimationEnd(Animator animation) {
+                                        fab.setVisibility(View.GONE);
+                                    }
+
+                                    @Override
+                                    public void onAnimationCancel(Animator animation) {
+                                        fab.setVisibility(View.GONE);
+                                    }
+
+                                    @Override
+                                    public void onAnimationRepeat(Animator animation) {
+
+                                    }
+                                })
+                                .start();
+                    }
+                }
+
+                return true;
+            }
+        });
     }
 
     private void addBottomNavigationItems() {

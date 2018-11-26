@@ -2,6 +2,7 @@ package com.apps.indiclass.fragment;
 
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -18,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.apps.indiclass.ChangePasswordActivity;
 import com.apps.indiclass.R;
 import com.apps.indiclass.model.Configuration;
 import com.apps.indiclass.util.SessionManager;
@@ -181,6 +183,8 @@ public class ProfileFragment extends Fragment {
 //                                        dialogInterface.dismiss();
 //                                    }
 //                                }).show();
+
+                        startActivity(new Intent(getContext(), ChangePasswordActivity.class));
                         Log.i(TAG, "onClick: " + RESETPASS_LABEL);
                     }
                 }

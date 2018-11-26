@@ -1,5 +1,6 @@
 package com.apps.indiclass.api;
 
+import com.apps.indiclass.model.ChangePassRest;
 import com.apps.indiclass.model.ClassRest;
 import com.apps.indiclass.model.LoginResponse;
 import com.apps.indiclass.model.DemandRest;
@@ -56,6 +57,9 @@ public interface ApiCall {
                                      @Query("user_utc") String user_utc, @Query("access_token") String access_token,
                                      @Query("hr") String hr, @Query("hrt") String hrt,
                                      @Query("topic") String topic);
+    @POST("changePassword")
+    @FormUrlEncoded
+    Call<ChangePassRest> changePassword(@Field("id_user") String id_user, @Field("oldpass") String oldpass, @Field("newpass") String newpass);
 
     @POST("tps_me_r")
     @FormUrlEncoded
@@ -67,6 +71,5 @@ public interface ApiCall {
 
     @POST("get_token")
     @FormUrlEncoded
-//    body: "session=" + accessSession + "&user_utc=" + user_utc + "&janus=" + janusServer + "&usertype=student"+"&classid=" + classid
-    Call<StaticDRest> getToken(@Field("session") String s, @Field("user_utc") String utc,@Field("janus") String janusServer,@Field("usertype") String usertype,@Field("classid") String classid);
+    Call<StaticDRest> getToken(@Field("session") String s, @Field("user_utc") String utc, @Field("janus") String janusServer, @Field("usertype") String usertype,@Field("classid") String classid);
 }

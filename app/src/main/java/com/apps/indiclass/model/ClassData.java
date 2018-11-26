@@ -33,6 +33,10 @@ public class ClassData {
     String time;
 
     private
+    @SerializedName("enddate")
+    String enddate;
+
+    private
     @SerializedName("endtime")
     String endtime;
 
@@ -53,10 +57,19 @@ public class ClassData {
                 ", description='" + description + '\'' +
                 ", date='" + date + '\'' +
                 ", time='" + time + '\'' +
+                ", enddate='" + enddate + '\'' +
                 ", endtime='" + endtime + '\'' +
                 ", tutor_id='" + tutor_id + '\'' +
                 ", user_image='" + user_image + '\'' +
                 '}';
+    }
+
+    public String getEnddate() {
+        return enddate;
+    }
+
+    public void setEnddate(String enddate) {
+        this.enddate = enddate;
     }
 
     public String getDate() {

@@ -69,11 +69,11 @@ var app = {
         console.warn("ini aku mas "+type);
         var a = '';
         if(type == 'priv') {
-            a = 'https://classmiles.com/master/tps_me_priv/' + class_id + '?t=' + template + '&id_user=' + id_user + '&p=' + p;
+            a = 'https://indiclass.id/master/tps_me_priv/' + class_id + '?t=' + template + '&id_user=' + id_user + '&p=' + p;
         } else if(type == 'grup'){
-            a = 'https://classmiles.com/master/tps_me_group/' + class_id + '?t=' + template + '&id_user=' + id_user + '&p=' + p;
+            a = 'https://indiclass.id/master/tps_me_group/' + class_id + '?t=' + template + '&id_user=' + id_user + '&p=' + p;
         } else {
-            a = 'https://classmiles.com/master/tps_me/' + class_id + '?t=' + template + '&id_user=' + id_user + '&p=' + p;
+            a = 'https://indiclass.id/master/tps_me/' + class_id + '?t=' + template + '&id_user=' + id_user + '&p=' + p;
         }
         window.location=a;
     }

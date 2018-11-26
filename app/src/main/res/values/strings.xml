@@ -39,6 +39,13 @@
     <string name="if_message_approval">\n\nJika IYA, kami akan meminta persetujuan yang bersangkutan.\n\nAnda perlu menunggu maksimum satu jam untuk persetujuan tersebut.</string>
     <string name="cannot_empty">Tidak boleh kosong</string>
     <string name="loading">Mohon tunggu . . .</string>
+    <string name="wait">Tunggu</string>
+    <string name="change_password">Ubah Kata Sandi</string>
+    <string name="new_password">Kata Sandi Baru</string>
+    <string name="old_password">Kata Sandi Lama</string>
+    <string name="re_type_password">Ketik ulang kata sandi</string>
+    <string name="password_not_match">Kata sandi Anda tidak sesuai</string>
+    <string name="succes_change_password">Berhasil mengubah kata sandi</string>
     <string-array name="duration_name">
         <item>15 Menit</item>
         <item>30 Menit</item>

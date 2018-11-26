@@ -1,8 +1,10 @@
 package com.apps.indiclass.adapter;
 
+import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,14 +18,18 @@ import android.widget.Toast;
 
 import com.apps.indiclass.JanusActivity;
 import com.apps.indiclass.R;
+import com.apps.indiclass.fragment.ClassFragment;
 import com.apps.indiclass.model.MyClassModel;
+import com.apps.indiclass.util.Config;
 import com.apps.indiclass.util.Constant;
 import com.apps.indiclass.util.SessionManager;
 import com.bumptech.glide.Glide;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -58,12 +64,15 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.MyViewHolder
         }
     };
 
-    public ClassAdapter(Context mcontext, List<MyClassModel> moviesList, OnItemClickListener listener) {
+    Fragment fragments;
+
+    public ClassAdapter(Context mcontext, List<MyClassModel> moviesList, OnItemClickListener listener, ClassFragment fragment) {
         this.context = mcontext;
         this.moviesList = moviesList;
         viewHoldersList = new ArrayList<>();
         sessionManager = new SessionManager(context);
         this.listener = listener;
+        this.fragments = fragment;
         startUpdateTimer();
     }
 
@@ -117,6 +126,32 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.MyViewHolder
             Glide.with(context)
                     .load(Constant.ImageTutor + progamModel.getsImage())
                     .into(holder.thumbnail);
+            String jamsekarang = FORMATTERSQL.format(c.getTime());
+
+            Date datenow = null, datestart = null, dateend = null;
+
+            try {
+
+                datenow = FORMATTERSQL.parse(jamsekarang);
+                datestart = FORMATTERSQL.parse(progamModel.getsDateStart());
+                dateend = FORMATTERSQL.parse(progamModel.getsDateEnd());
+
+                if (datenow.compareTo(datestart) < 0) {
+
+                    holder.btnMasuk.setVisibility(View.INVISIBLE);
+                    holder.btnWait.setVisibility(View.VISIBLE);
+                } else if (datenow.compareTo(datestart) == 0 || datenow.compareTo(datestart) > 0 && datenow.compareTo(dateend) < 0){
+
+                    holder.btnWait.setVisibility(View.INVISIBLE);
+                    holder.btnMasuk.setVisibility(View.VISIBLE);
+                } else if (datenow.compareTo(dateend) > 0) {
+
+                    holder.btnWait.setVisibility(View.INVISIBLE);
+                    holder.btnMasuk.setVisibility(View.INVISIBLE);
+                }
+            }  catch (ParseException e) {
+                e.printStackTrace();
+            }
             synchronized (viewHoldersList) {
                 holder.setData(moviesList.get(position));
                 viewHoldersList.add(holder);
@@ -162,6 +197,7 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.MyViewHolder
         }
 
         void updateTimeRemaining() {
+//            Log.w(TAG, "updateTimeRemaining: EXPIRED " + item.getExpiredTime());
             if (item.getExpiredTime() != 0) {
                 long currentTime = System.currentTimeMillis();
                 long timeDiff = item.getExpiredTime() - currentTime;
@@ -179,12 +215,12 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.MyViewHolder
                         btnWait.setText(dbZero(minutes) + ":" + dbZero(seconds));
 
                 } else {
-//                    Intent pushNotification = new Intent(Config.NEW_CLASS);
-//                    LocalBroadcastManager.getInstance(mContext).sendBroadcast(pushNotification);
+                    Intent pushNotification = new Intent(Config.NEW_CLASS);
+                    LocalBroadcastManager.getInstance(context).sendBroadcast(pushNotification);
 
-                    btnMasuk.setVisibility(View.VISIBLE);
-                    btnWait.setVisibility(View.GONE);
+                    btnWait.setText(context.getString(R.string.wait));
                     tmr.cancel();
+                    Log.e(TAG, "updateTimeRemaining: "+timeDiff);
                 }
             }
         }
