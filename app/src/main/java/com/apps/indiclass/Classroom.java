@@ -66,7 +66,7 @@ public class Classroom extends CordovaActivity {
         ws.setDatabasePath(getFilesDir().getParentFile().getPath() + "/databases");
         Log.e(TAG, "onCreate: " + wV.getUrl());
 
-        makeNotification(this);
+//        makeNotification(this);
 
     }
 

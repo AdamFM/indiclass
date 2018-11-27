@@ -46,6 +46,7 @@
     <string name="re_type_password">Ketik ulang kata sandi</string>
     <string name="password_not_match">Kata sandi Anda tidak sesuai</string>
     <string name="succes_change_password">Berhasil mengubah kata sandi</string>
+    <string name="permission_message">Aplikasi memerlukan akses kamera dan mikrofon. Mohon diizinkan.</string>
     <string-array name="duration_name">
         <item>15 Menit</item>
         <item>30 Menit</item>

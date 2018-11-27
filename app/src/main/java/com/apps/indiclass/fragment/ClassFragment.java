@@ -239,73 +239,73 @@ public class ClassFragment extends Fragment {
                             @Override
                             public void onItemClick(MyClassModel item) {
 
-//                                ShowProgressDialog();
+                                ShowProgressDialog();
                                 progamModel = item;
-//                                Intent in = new Intent(getActivity(), Classroom.class);
-//                                in.putExtra("visible", "");
-//                                in.putExtra("subject", progamModel.getsSubject());
-//                                in.putExtra("template", "all_featured");
-//                                in.putExtra("id_user", id_user);
-//                                in.putExtra("class_id", progamModel.getsClassID());
-//                                in.putExtra("token", token);
-//                                in.putExtra("isTV", false);
-//                                startActivity(in);
-//                                HideProgressDialog();
+                                Intent in = new Intent(getActivity(), Classroom.class);
+                                in.putExtra("visible", "");
+                                in.putExtra("subject", progamModel.getsSubject());
+                                in.putExtra("template", "all_featured");
+                                in.putExtra("id_user", id_user);
+                                in.putExtra("class_id", progamModel.getsClassID());
+                                in.putExtra("token", token);
+                                in.putExtra("isTV", false);
+                                startActivity(in);
+                                HideProgressDialog();
 //
-                            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-                            interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-                            OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
-
-                            retrofit = new Retrofit.Builder()
-                                    .baseUrl(Constant.TPS_ME)
-                                    .client(client)
-                                    .addConverterFactory(GsonConverterFactory.create())
-                                    .build();
-                            retrofit2 = new Retrofit.Builder()
-                                    .baseUrl(Constant.STATIC_REST)
-                                    .client(client)
-                                    .addConverterFactory(GsonConverterFactory.create())
-                                    .build();
-
-                            mAPIService2 = retrofit.create(ApiCall.class);
-
-                            mApi2 = retrofit2.create(ApiCall.class);
-
-                                Toast.makeText(getContext(), "Masuk Kelas", Toast.LENGTH_SHORT).show();
-                            mAPIService2.getSession(id_user, progamModel.getsClassID()).enqueue(new Callback<SessionRest>() {
-                                @Override
-                                public void onResponse(Call<SessionRest> call, Response<SessionRest> response) {
-                                    if (response.body() != null) {
-                                        if (response.body().getAccess_session() != null) {
-                                            sSession = response.body().getAccess_session();
-                                            mApi2.getStaticData(response.body().getAccess_session()).enqueue(new Callback<StaticDRest>() {
-                                                @Override
-                                                public void onResponse(Call<StaticDRest> call, Response<StaticDRest> response) {
-                                                    if (response.body() != null) {
-                                                        if (response.body().getStaticDRes() != null) {
-
-                                                            name = response.body().getStaticDRes().getDisplay_name();
-//                                        roomid = Integer.valueOf(response.body().getStaticDRes().getClass_id());
-                                                            getToken(response.body().getStaticDRes().getJanus());
-                                                        }
-
-                                                    }
-                                                }
-
-                                                @Override
-                                                public void onFailure(Call<StaticDRest> call, Throwable t) {
-
-                                                }
-                                            });
-                                        }
-                                    }
-                                }
-
-                                @Override
-                                public void onFailure(Call<SessionRest> call, Throwable t) {
-
-                                }
-                            });
+//                            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+//                            interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+//                            OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+//
+//                            retrofit = new Retrofit.Builder()
+//                                    .baseUrl(Constant.TPS_ME)
+//                                    .client(client)
+//                                    .addConverterFactory(GsonConverterFactory.create())
+//                                    .build();
+//                            retrofit2 = new Retrofit.Builder()
+//                                    .baseUrl(Constant.STATIC_REST)
+//                                    .client(client)
+//                                    .addConverterFactory(GsonConverterFactory.create())
+//                                    .build();
+//
+//                            mAPIService2 = retrofit.create(ApiCall.class);
+//
+//                            mApi2 = retrofit2.create(ApiCall.class);
+//
+//                                Toast.makeText(getContext(), "Masuk Kelas", Toast.LENGTH_SHORT).show();
+//                            mAPIService2.getSession(id_user, progamModel.getsClassID()).enqueue(new Callback<SessionRest>() {
+//                                @Override
+//                                public void onResponse(Call<SessionRest> call, Response<SessionRest> response) {
+//                                    if (response.body() != null) {
+//                                        if (response.body().getAccess_session() != null) {
+//                                            sSession = response.body().getAccess_session();
+//                                            mApi2.getStaticData(response.body().getAccess_session()).enqueue(new Callback<StaticDRest>() {
+//                                                @Override
+//                                                public void onResponse(Call<StaticDRest> call, Response<StaticDRest> response) {
+//                                                    if (response.body() != null) {
+//                                                        if (response.body().getStaticDRes() != null) {
+//
+//                                                            name = response.body().getStaticDRes().getDisplay_name();
+////                                        roomid = Integer.valueOf(response.body().getStaticDRes().getClass_id());
+//                                                            getToken(response.body().getStaticDRes().getJanus());
+//                                                        }
+//
+//                                                    }
+//                                                }
+//
+//                                                @Override
+//                                                public void onFailure(Call<StaticDRest> call, Throwable t) {
+//
+//                                                }
+//                                            });
+//                                        }
+//                                    }
+//                                }
+//
+//                                @Override
+//                                public void onFailure(Call<SessionRest> call, Throwable t) {
+//
+//                                }
+//                            });
                             }
                         }, ClassFragment.this);
                         recyclerView.setAdapter(mAdapter);

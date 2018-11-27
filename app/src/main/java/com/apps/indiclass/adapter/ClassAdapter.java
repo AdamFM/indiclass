@@ -146,8 +146,8 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.MyViewHolder
                     holder.btnMasuk.setVisibility(View.VISIBLE);
                 } else if (datenow.compareTo(dateend) > 0) {
 
-                    holder.btnWait.setVisibility(View.INVISIBLE);
-                    holder.btnMasuk.setVisibility(View.INVISIBLE);
+                    holder.btnWait.setVisibility(View.GONE);
+                    holder.btnMasuk.setVisibility(View.GONE);
                 }
             }  catch (ParseException e) {
                 e.printStackTrace();
