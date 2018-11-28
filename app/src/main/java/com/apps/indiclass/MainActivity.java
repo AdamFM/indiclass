@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
                     fm.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).hide(active).show(fragment2).commit();
                     active = fragment2;
+                    ((ClassFragment) active).fetchStoreItems();
                     fab.setVisibility(View.VISIBLE);
 //                    loadFragment(new ClassFragment());
                     return true;

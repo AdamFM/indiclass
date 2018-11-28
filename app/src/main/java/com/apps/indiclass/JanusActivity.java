@@ -1,6 +1,7 @@
 package com.apps.indiclass;
 
 import android.app.Activity;
+import android.graphics.PixelFormat;
 import android.opengl.EGLContext;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
@@ -72,9 +73,12 @@ public class JanusActivity extends Activity {
         vsv.setPreserveEGLContextOnPause(true);
         vsv.setKeepScreenOn(true);
 
+//        vsv.setEGLConfigChooser(8, 8, 8, 8, 16, 0);
+//        vsv.getHolder().setFormat(PixelFormat.RGBA_8888);
+        vsv.setZOrderOnTop(true);
         VideoRendererGui.setView(vsv, new MyInit());
 
-        localRender = VideoRendererGui.create(72, 72, 25, 25, VideoRendererGui.ScalingType.SCALE_ASPECT_FIT, false);
+        localRender = VideoRendererGui.create(0, 52, 100, 25, VideoRendererGui.ScalingType.SCALE_ASPECT_FIT, false);
         remoteRender = VideoRendererGui.create(0, 0, 100, 45, VideoRendererGui.ScalingType.SCALE_ASPECT_FIT, true);
 
         session = new SessionManager(this);

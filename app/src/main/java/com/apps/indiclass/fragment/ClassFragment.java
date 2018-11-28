@@ -16,12 +16,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.apps.indiclass.Classroom;
 import com.apps.indiclass.JanusActivity;
+import com.apps.indiclass.MainActivity;
 import com.apps.indiclass.R;
 import com.apps.indiclass.adapter.ClassAdapter;
 import com.apps.indiclass.api.ApiCall;
@@ -64,6 +66,7 @@ public class ClassFragment extends Fragment {
     ApiCall mAPIService2, mApi2;
     Retrofit retrofit, retrofit2;
     TextView tvNo;
+    ImageView imgNo;
     String id_user, sdatekirim, sToken, sftime;
     ApiCall mAPIService;
     SessionManager session;
@@ -73,9 +76,9 @@ public class ClassFragment extends Fragment {
     android.support.v7.app.ActionBar ab;
     LinearLayout llLive, llWait, llPass;
     private RecyclerView recyclerView, recyclerViewW, recyclerViewP;
-    private List<MyClassModel> myClassModels;
-    private List<MyClassModel> myClassModelsW;
-    private List<MyClassModel> myClassModelsP;
+    private List<MyClassModel> myClassModels = new ArrayList<>();
+    private List<MyClassModel> myClassModelsW =new ArrayList<>();
+    private List<MyClassModel> myClassModelsP =new ArrayList<>();
     private ClassAdapter mAdapter, mAdapterW, mAdapterP;
 
     //Creating a broadcast receiver for gcm registration
@@ -107,6 +110,7 @@ public class ClassFragment extends Fragment {
         recyclerViewW = view.findViewById(R.id.recycler_viewwait);
         recyclerViewP = view.findViewById(R.id.recycler_viewpass);
         tvNo = view.findViewById(R.id.tvnoclassdetail);
+        imgNo = view.findViewById(R.id.imgNo);
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(mLayoutManager);
@@ -158,6 +162,7 @@ public class ClassFragment extends Fragment {
 
                     if (response.body().getClassData() == null) {
                         tvNo.setVisibility(View.VISIBLE);
+                        imgNo.setVisibility(View.VISIBLE);
                     } else {
                         if (response.body().getClassData().size() > 0) {
 
@@ -227,9 +232,13 @@ public class ClassFragment extends Fragment {
                                 } catch (ParseException e) {
                                     e.printStackTrace();
                                 }
+                                tvNo.setVisibility(View.GONE);
+                                imgNo.setVisibility(View.GONE);
                             }
                         } else {
                             tvNo.setVisibility(View.VISIBLE);
+                            imgNo.setVisibility(View.VISIBLE);
+
                         }
                     }
 
@@ -239,8 +248,8 @@ public class ClassFragment extends Fragment {
                             @Override
                             public void onItemClick(MyClassModel item) {
 
-                                ShowProgressDialog();
                                 progamModel = item;
+                                ShowProgressDialog();
                                 Intent in = new Intent(getActivity(), Classroom.class);
                                 in.putExtra("visible", "");
                                 in.putExtra("subject", progamModel.getsSubject());
@@ -482,6 +491,7 @@ public class ClassFragment extends Fragment {
                             in.putExtra("isTV", false);
                             in.putExtra("name", name);
                             startActivity(in);
+                            HideProgressDialog();
                         } else
                             getToken(janus);
                     }
